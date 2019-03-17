@@ -21,6 +21,29 @@ namespace Lab4
 
         private static void ImplementLoggingFuntion()
         {
+            String userId="300", password="300";
+            int count = 0;
+            Console.WriteLine("Enter userId: ");
+            Console.WriteLine("Enter password: ");
+
+            while (count < 3)
+            {
+                string Id = Console.ReadLine();
+                string pw = Console.ReadLine();
+                if(!Id.Equals(userId) || !pw.Equals(password))
+                {
+                    Console.WriteLine("you are fucking wrong, "+(2-count)+" tries remained");
+                    count++;
+                }
+                else
+                    break;
+                   
+            }
+            if (count < 3)
+                Console.WriteLine("you are now looged in, hello " + userId);
+            else
+                Console.WriteLine("fuck off you fucking hacker");
+            
             /* We have 5 levels of log message. Let's test all.
              *  FATAL
                 ERROR
